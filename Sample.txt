@@ -1,0 +1,324 @@
+SAMPLE OUTPUT FOR A POST REQUEST
+
+NetEmu command: python NetEmu.py 5000
+CLIENT OUTPUT:
+
+python FxA-client.py 8080 127.0.0.1 5000
+
+RxP client ready
+Available commands: 
+ connect
+Enter Command
+connect
+client sending initial SYN with sequence #5423
+Syn Ack + Public Key received from server at ('127.0.0.1', 5000)
+
+client sent public key to server with sequence #5424
+Final Connection Establishment ACK received! from server at ('127.0.0.1', 5000)
+
+Available commands: 
+get <filename> 
+post <filename> 
+disconnect
+Enter Command
+post test.txt
+Client transmitting packets now...
+Client sending GET/POST request with sequence #5425
+RECEIVED POST COMMAND CONFIRMATION ACK
+Client Ready to receive file now...
+Client Sending Message with sequence #5426
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5427
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5428
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5429
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5430
+No ACK received...sending other packets in window...
+ACK RECEIVED for sequence #5426
+Client Sending Message with sequence #5427
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5428
+ACK found for sequence #5427
+Client Sending Message with sequence #5429
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5430
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5431
+No ACK received...sending other packets in window...
+Client Sending Message with sequence #5432
+ACK found for sequence #5428
+Client Sending Message with sequence #5430
+ACK found for sequence #5429
+ACK RECEIVED for sequence #5430
+Client Sending Message with sequence #5431
+No ACK received...sending other packets in window...
+ACK not received....retransmitting packet with sequence #5431
+Client re-transmitting packet with sequence #5431
+ACK not received....retransmitting packet with sequence #5431
+Client re-transmitting packet with sequence #5431
+ACK not received....retransmitting packet with sequence #5431
+Client re-transmitting packet with sequence #5431
+ACK not received....retransmitting packet with sequence #5431
+Client re-transmitting packet with sequence #5431
+ACK RECEIVED for sequence #5431
+Client Sending Message with sequence #5432
+No ACK received...sending other packets in window...
+ACK RECEIVED for sequence #5432
+Client Sending Message with sequence #5433
+No ACK received...sending other packets in window...
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK not received....retransmitting packet with sequence #5433
+Client re-transmitting packet with sequence #5433
+ACK RECEIVED for sequence #5433
+Available commands:
+disconnect
+Enter Command
+disconnect
+Terminating connection...
+Client Sending Fin: I with sequence #5434
+Terminating connection...
+Client Sending Fin: I with sequence #5435
+Terminating connection...
+Client Sending Fin: I with sequence #5436
+Terminating connection...
+Client Sending Fin: I with sequence #5437
+Terminating connection...
+Client Sending Fin: I with sequence #5438
+Terminating connection...
+Client Sending Fin: I with sequence #5439
+Terminating connection...
+Client Sending Fin: I with sequence #5440
+Terminating connection...
+Client Sending Fin: I with sequence #5441
+Client Received Fin I ACK
+Client Received Server Fin: J
+Client Sending Fin: J's ACK with sequence #5442
+Client Sending Fin: J's ACK with sequence #5443
+Client Sending Fin: J's ACK with sequence #5444
+Client Sending Fin: J's ACK with sequence #5445
+
+SERVER OUTPUT:
+
+python FxA-server.py 8081 127.0.0.1 5000
+UDP server ready
+SYN recieved from client at ('127.0.0.1', 5000)
+
+Server sending SYN ACK + public key with sequence  #8579 Next sequence expected: 5424
+SYN ACK recieved from client at ('127.0.0.1', 5000)
+
+Server sending ACK with sequence #8580 Next sequence expectation: 5425
+Server SENT LAST ACK FOR HANDSHAKE
+Server received POST request
+Server sending POST/GET REQUEST ACK 8581 Next sequence expected: 5426
+Server sending ACK with sequence #8582 Next sequence expectation: 5426
+Server sending ACK with sequence #8583 Next sequence expectation: 5427
+Server sending ACK with sequence #8584 Next sequence expectation: 5428
+Server sending ACK with sequence #8585 Next sequence expectation: 5429
+Server sending ACK with sequence #8586 Next sequence expectation: 5430
+Server sending ACK with sequence #8587 Next sequence expectation: 5431
+Server sending ACK with sequence #8588 Next sequence expectation: 5428
+Server sending ACK with sequence #8589 Next sequence expectation: 5429
+Server sending ACK with sequence #8590 Next sequence expectation: 5430
+Server sending ACK with sequence #8591 Next sequence expectation: 5431
+Server sending ACK with sequence #8592 Next sequence expectation: 5432
+Server sending ACK with sequence #8593 Next sequence expectation: 5433
+Server sending ACK with sequence #8594 Next sequence expectation: 5431
+Server sending ACK with sequence #8595 Next sequence expectation: 5432
+Server sending ACK with sequence #8596 Next sequence expectation: 5432
+Server sending ACK with sequence #8597 Next sequence expectation: 5432
+Server sending ACK with sequence #8598 Next sequence expectation: 5432
+Server sending ACK with sequence #8599 Next sequence expectation: 5432
+Server sending ACK with sequence #8600 Next sequence expectation: 5433
+Server sending ACK with sequence #8601 Next sequence expectation: 5434
+Server sending ACK with sequence #8602 Next sequence expectation: 5434
+Server sending ACK with sequence #8603 Next sequence expectation: 5434
+Server sending ACK with sequence #8604 Next sequence expectation: 5434
+Server sending ACK with sequence #8605 Next sequence expectation: 5434
+Server sending ACK with sequence #8606 Next sequence expectation: 5434
+Server sending ACK with sequence #8607 Next sequence expectation: 5434
+Server sending ACK with sequence #8608 Next sequence expectation: 5434
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8609 Next sequence expected: 5435
+Server sending FIN: J with sequence #8610 Next sequence expected: 5435
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8611 Next sequence expected: 5436
+Server sending FIN: J with sequence #8612 Next sequence expected: 5436
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8613 Next sequence expected: 5437
+Server sending FIN: J with sequence #8614 Next sequence expected: 5437
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8615 Next sequence expected: 5438
+Server sending FIN: J with sequence #8616 Next sequence expected: 5438
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8617 Next sequence expected: 5439
+Server sending FIN: J with sequence #8618 Next sequence expected: 5439
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8619 Next sequence expected: 5440
+Server sending FIN: J with sequence #8620 Next sequence expected: 5440
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8621 Next sequence expected: 5441
+Server sending FIN: J with sequence #8622 Next sequence expected: 5441
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #8623 Next sequence expected: 5442
+Server sending FIN: J with sequence #8624 Next sequence expected: 5442
+Fin J's ACK Received. Server closing.
+
+
+SAMPLE OUTPUT FOR GET REQUEST:
+
+NetEmu command: python NetEmu.py 5000
+
+CLIENT OUTPUT:
+
+python FxA-client.py 8080 127.0.0.1 5000
+RxP client ready
+Available commands: 
+ connect
+Enter Command
+connect
+client sending initial SYN with sequence #8176
+Syn Ack + Public Key received from server at ('127.0.0.1', 5000)
+
+client sent public key to server with sequence #8177
+Final Connection Establishment ACK received! from server at ('127.0.0.1', 5000)
+
+Available commands: 
+get <filename> 
+post <filename> 
+disconnect
+Enter Command
+get test.txt
+Client initialized for GET
+Client sending GET/POST request with sequence #8178
+RECEIVED GET CONFIRMATION ACK
+Client Ready to receive file now
+Client sending ACK with sequence #8179 Next sequence expectation: 7855
+Client sending ACK with sequence #8180 Next sequence expectation: 7856
+Client sending ACK with sequence #8181 Next sequence expectation: 7857
+Client sending ACK with sequence #8182 Next sequence expectation: 7858
+Client sending ACK with sequence #8183 Next sequence expectation: 7859
+Client sending ACK with sequence #8184 Next sequence expectation: 7856
+Client sending ACK with sequence #8185 Next sequence expectation: 7857
+Client sending ACK with sequence #8186 Next sequence expectation: 7858
+Client sending ACK with sequence #8187 Next sequence expectation: 7859
+Client sending ACK with sequence #8188 Next sequence expectation: 7860
+Client sending ACK with sequence #8189 Next sequence expectation: 7860
+Client sending ACK with sequence #8190 Next sequence expectation: 7860
+Client sending ACK with sequence #8191 Next sequence expectation: 7860
+Client sending ACK with sequence #8192 Next sequence expectation: 7860
+Client sending ACK with sequence #8193 Next sequence expectation: 7861
+Client sending ACK with sequence #8194 Next sequence expectation: 7861
+Client sending ACK with sequence #8195 Next sequence expectation: 7861
+Client sending ACK with sequence #8196 Next sequence expectation: 7861
+Client sending ACK with sequence #8197 Next sequence expectation: 7861
+Client sending ACK with sequence #8198 Next sequence expectation: 7862
+File Transfer Complete, waiting for command now...
+Available commands:
+disconnect
+Enter Command
+disconnect
+Terminating connection...
+Client Sending Fin: I with sequence #8199
+Terminating connection...
+Client Sending Fin: I with sequence #8200
+Terminating connection...
+Client Sending Fin: I with sequence #8201
+Terminating connection...
+Client Sending Fin: I with sequence #8202
+Terminating connection...
+Client Sending Fin: I with sequence #8203
+Client Received Fin I ACK
+Client Received Server Fin: J
+Client Sending Fin: J's ACK with sequence #8204
+Client Sending Fin: J's ACK with sequence #8205
+Client Sending Fin: J's ACK with sequence #8206
+Client Sending Fin: J's ACK with sequence #8207
+
+SERVER OUTPUT:
+
+python FxA-server.py 8081 127.0.0.1 5000
+UDP server ready
+SYN recieved from client at ('127.0.0.1', 5000)
+
+Server sending SYN ACK + public key with sequence  #7559 Next sequence expected: 783
+SYN ACK recieved from client at ('127.0.0.1', 5000)
+
+Server sending ACK with sequence #7560 Next sequence expectation: 784
+Server SENT LAST ACK FOR HANDSHAKE
+Server received GET request...
+Receive request confirmation sent with sequence #7561
+Server sending POST/GET REQUEST ACK 7561 Next sequence expected: 785
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+ACK RECEIVED for seq #7562
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+No ACK found, transmitting other packets now...
+ACK RECEIVED for seq #7564
+ACK RECEIVED for seq #7565
+ACK RECEIVED for seq #7566
+ACK RECEIVED for seq #7563
+No ACK found, transmitting other packets now...
+ACK not received..retransmitting packet with sequence #7567
+ACK not received..retransmitting packet with sequence #7567
+ACK not received..retransmitting packet with sequence #7567
+ACK RECEIVED for seq #7567
+No ACK found, transmitting other packets now...
+ACK not received..retransmitting packet with sequence #7568
+ACK not received..retransmitting packet with sequence #7568
+ACK not received..retransmitting packet with sequence #7568
+ACK not received..retransmitting packet with sequence #7568
+ACK RECEIVED for seq #7568
+No ACK found, transmitting other packets now...
+ACK not received..retransmitting packet with sequence #7569
+ACK not received..retransmitting packet with sequence #7569
+ACK not received..retransmitting packet with sequence #7569
+ACK not received..retransmitting packet with sequence #7569
+ACK RECEIVED for seq #7569
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #7570 Next sequence expected: 806
+Server sending FIN: J with sequence #7571 Next sequence expected: 806
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #7572 Next sequence expected: 807
+Server sending FIN: J with sequence #7573 Next sequence expected: 807
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #7574 Next sequence expected: 808
+Server sending FIN: J with sequence #7575 Next sequence expected: 808
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #7576 Next sequence expected: 809
+Server sending FIN: J with sequence #7577 Next sequence expected: 809
+FIN: I recieved from client at ('127.0.0.1', 5000)
+
+Server sending FIN-ACK for Client's FIN: I with sequence #7578 Next sequence expected: 810
+Server sending FIN: J with sequence #7579 Next sequence expected: 810
+Fin J's ACK Received. Server closing.
